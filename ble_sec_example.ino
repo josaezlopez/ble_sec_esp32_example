@@ -39,7 +39,7 @@ class ServerCallbacks: public BLEServerCallbacks {
 
 };
 
-// Duncion callback para el control del interruptor
+// Funcion callback para el control del interruptor
 class ControlCallback: public BLECharacteristicCallbacks {
     public:
 
@@ -48,7 +48,7 @@ class ControlCallback: public BLECharacteristicCallbacks {
         if (rxValue.length() > 0) {
             Serial.printf("Valor cambiado... nuevo valor:%c\r\n",rxValue[0]);
             if (rxValue[0] == '1') {
-              // Put here what is executed when writing '0'
+              // Put here what is executed when writing '1'
             }
             else if (rxValue[0] == '0') {
               // Put here what is executed when writing '0'
